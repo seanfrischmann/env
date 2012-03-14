@@ -1,4 +1,7 @@
 #!/usr/bin/perl -w
+
+eval 'exec /usr/bin/perl -w -S $0 ${1+"$@"}'
+    if 0; # not running under some shell
 use strict;
 
 # Examples:
@@ -159,7 +162,7 @@ sub gitdata {
     }
 
     # if the log mentions switching to the commit id, use whatever it calls it
-    $branch = $1 if $lastrelevant =~ /\scheckout\:\s+moving\s+from\s+\S+\s+to\s+(\S+)\s*$/;
+    $branch = $1 if $lastrelevant =~ /\scheckout\:\s+moving\s+from\s+\S+\s+to\s+(\S+)\s*$/ || $lastrelevant =~ /\smerge\s+(\S+)\:\s+Fast\-forward\s*$/;
   } elsif ($headref =~ /^refs\/heads\/(.+?)\s*$/) {
     # normal branch
     $branch = $1;
@@ -190,6 +193,7 @@ sub gitdata {
   my %sectionmap = (
     'Changes to be committed' => 'c',
     'Changed but not updated' => 'u',
+    'Changes not staged for commit' => 'u',
     'Untracked files' => 'f',
     'Unmerged paths' => 'u',
   );
