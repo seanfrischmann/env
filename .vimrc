@@ -13,13 +13,14 @@ set hlsearch
 set noai
 set tabstop=4
 set shiftwidth=4
-set expandtab
+set list
+set list listchars=tab:»\ ,trail:-,extends:>,precedes:<,eol:¬
 
 
 syntax on
 filetype on
 filetype plugin on
-filetype indent off
+filetype indent on
 
 "" Highlight search terms...
 set hlsearch
