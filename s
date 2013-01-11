@@ -36,6 +36,7 @@ for (@buffer) {
 }
 
 print "  ------------------------\n";
+print "     0.  New Session\n";
 
 my $input;
 if (scalar @ARGV) {
@@ -46,8 +47,15 @@ if (scalar @ARGV) {
 }
 
 my $session;
-if ($input =~ m/^\d+$/ && $input > 0 && $input < $i) {
-    $session = $sessions[$input-1];
+if ($input =~ m/^\d+$/) {
+    if ($input == 0) {
+        print "New Session Name: ";
+        chomp(my $name = <>);
+        `screen -S $name`;
+        exit;
+    } elsif ($input > 0 && $input < $i) {
+        $session = $sessions[$input-1];
+    }
 } else {
     for (@sessions) {
         $session = $1 if (m/(.*\.$input$)/);
