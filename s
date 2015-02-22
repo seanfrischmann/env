@@ -28,7 +28,7 @@ print <<'EOS';
 EOS
 
 for (@buffer) {
-    if (m/(\d+\..*?)\.?\s*\((Detached|Attached)\)/) {
+    if (m/(\d+\.\S*).*?\((Detached|Attached)\)/) {
         push (@sessions, $1);
         print "     $i.  $1\n";
         ++$i;
@@ -63,6 +63,7 @@ if ($input =~ m/^\d+$/) {
 }
 
 if ($session) {
+	print "screen -d -r $session\n";
     `screen -d -r $session`;
 } else {
     print "  Could not reattach to '$input'\n";

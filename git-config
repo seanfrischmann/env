@@ -1,6 +1,6 @@
 #!/bin/sh
 
-git config --global user.name "Corey Maher"
+git config --global user.name "Sean Frischmann"
 #git config --global user.email "..."
 
 git config --global color.branch auto

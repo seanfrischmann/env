@@ -2,12 +2,12 @@
 
 cd ~
 
-cp ~/env/.vimrc ~/
+#cp ~/env/.vimrc ~/
 cp ~/env/.screenrc ~/
 cp ~/env/.perltidyrc ~/
 
 grep -q "source $HOME/env/bashrc_additions" ~/.bashrc || echo "source $HOME/env/bashrc_additions" >> ~/.bashrc
 
-~/env/git-config
+#~/env/git-config
 
 . .bashrc

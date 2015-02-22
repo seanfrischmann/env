@@ -4,12 +4,12 @@ set ignorecase
 set smartcase
 set title
 set scrolloff=3
-set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
-set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set ruler
 set showmatch
 set incsearch
 set hlsearch
+nnoremap <F1> :noh<return><esc>
+colorscheme elflord
 set noai
 set tabstop=4
 set shiftwidth=4
@@ -30,7 +30,7 @@ set laststatus=2
 let g:buftabs_in_statusline=1
 
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-match OverLength /\%121v.*/
+match OverLength /\%94v.*/
 
 map ,pt <ESC>:%! perltidy<CR>
 map ,ptv <ESC>:'<,'>! perltidy<CR>
