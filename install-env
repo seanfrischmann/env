@@ -2,7 +2,7 @@
 
 cd ~
 
-#cp ~/env/.vimrc ~/
+cp ~/env/.vimrc ~/
 cp ~/env/.screenrc ~/
 cp ~/env/.perltidyrc ~/
 

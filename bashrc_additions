@@ -9,8 +9,17 @@ alias gcm="git commit -m"
 alias gal="git add -A"
 alias gph="git push"
 alias gpl="git pull"
+alias gpu="git push -u origin HEAD"
+alias gpo="git push origin"
 
+alias ns="screen -S"
 
+alias bashrc="vim ~/env/bashrc_additions"
+alias sbrc="source ~/.bashrc"
+
+alias ls="ls -G"
+
+alias sgrep='GREP_COLOR="31" fgrep -nrI --color=always'
 
 export PATH=$PATH:$HOME/env
 
