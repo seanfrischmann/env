@@ -1,4 +1,4 @@
-alias gd="git difftool --tool=vimdiff"
+alias gd="git diff"
 alias gl="git log -n 20 --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset %an' --abbrev-commit --date=relative"
 alias gs="git status"
 alias gco="git checkout"
@@ -16,8 +16,6 @@ alias ns="screen -S"
 
 alias bashrc="vim ~/env/bashrc_additions"
 alias sbrc="source ~/.bashrc"
-
-alias ls="ls -G"
 
 alias sgrep='GREP_COLOR="31" fgrep -nrI --color=always'
 
