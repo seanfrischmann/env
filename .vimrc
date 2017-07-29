@@ -8,13 +8,14 @@ set ruler
 set showmatch
 set incsearch
 set hlsearch
-nnoremap <F1> :noh<return><esc>
-colorscheme elflord
 set noai
 set tabstop=4
 set shiftwidth=4
 set list
 set list listchars=tab:»\ ,trail:-,extends:>,precedes:<,eol:¬
+set expandtab
+set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 
 
 syntax on
@@ -34,3 +35,5 @@ match OverLength /\%94v.*/
 
 map ,pt <ESC>:%! perltidy<CR>
 map ,ptv <ESC>:'<,'>! perltidy<CR>
+
+runtime macros/matchit.vim
