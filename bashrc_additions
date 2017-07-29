@@ -11,6 +11,7 @@ alias gph="git push"
 alias gpl="git pull"
 alias gpu="git push -u origin HEAD"
 alias gpo="git push origin"
+alias gsh="git stash"
 
 alias ns="screen -S"
 
