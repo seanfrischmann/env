@@ -18,6 +18,9 @@ alias ns="screen -S"
 alias bashrc="vim ~/env/bashrc_additions"
 alias sbrc="source ~/.bashrc"
 
+alias extglobEnable="shopt -s extglob"
+alias extglobDisable="shopt -u extglob"
+
 alias sgrep='GREP_COLOR="31" fgrep -nrI --color=always'
 
 export PATH=$PATH:$HOME/env
