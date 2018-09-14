@@ -15,8 +15,13 @@ alias gsh="git stash"
 
 alias ns="screen -S"
 
+alias nt="tmux new -s"
+alias tl="tmux ls"
+alias ta="tmux a -t"
+
 alias bashrc="vim ~/env/bashrc_additions"
 alias sbrc="source ~/.bashrc"
+alias ls="ls -G"
 
 alias extglobEnable="shopt -s extglob"
 alias extglobDisable="shopt -u extglob"
