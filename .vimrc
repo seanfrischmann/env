@@ -37,8 +37,12 @@ set incsearch " ...dynamically as they are typed.
 set laststatus=2
 let g:buftabs_in_statusline=1
 
-highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-match OverLength /\%94v.*/
+highlight OverLength ctermbg=darkred ctermfg=white guibg=#FFD9D9
+
+augroup vimrc_autocmds
+    autocmd!
+    autocmd BufEnter,WinEnter * call matchadd('OverLength', '\%>94v.\+', -1)
+augroup END
 
 map ,pt <ESC>:%! perltidy<CR>
 map ,ptv <ESC>:'<,'>! perltidy<CR>
